@@ -22,7 +22,8 @@ while(True):
     #For loop
     for(x, y, w, h) in faces:
         print(x, y, w, h)
-        roi_gray = grayScaling[y:y+h, x:x+w]
+        roi_gray = grayScaling[y:y+h, x:x+w] #(ycord_start, ycord_end)
+        roi_color = frame[y:y+h, x:x+w]
         img_item = "my_img.png"
         cv2.imwrite(img_item, roi_gray)
     #Display result
