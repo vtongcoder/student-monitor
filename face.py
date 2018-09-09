@@ -21,6 +21,12 @@ while(True):
 
     #For loop
     for(x, y, w, h) in faces:
+
+
+        #Its deep learning time
+        
+
+
         roi_gray = grayScaling[y:y+h, x:x+w] #(ycord_start, ycord_end)
         roi_color = frame[y:y+h, x:x+w]
         img_item = "my_img.png"
