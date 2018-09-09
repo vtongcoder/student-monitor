@@ -2,6 +2,7 @@
 import cv2
 import numpy
 
+#This is the cassade that we need
 face_lib = cv2.CascadeClassifier('data/haarcascade_frontalface_alt2.xml')
 
 #Capture is executeable
