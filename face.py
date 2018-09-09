@@ -21,11 +21,18 @@ while(True):
 
     #For loop
     for(x, y, w, h) in faces:
-        print(x, y, w, h)
         roi_gray = grayScaling[y:y+h, x:x+w] #(ycord_start, ycord_end)
         roi_color = frame[y:y+h, x:x+w]
         img_item = "my_img.png"
         cv2.imwrite(img_item, roi_gray)
+
+        #Draw a rectangle (?)
+        color = (250, 0, 0) #Blue BRG ???
+        stroke = 2
+        end_cordx = x + w
+        end_cordy = y + h
+        cv2.rectangle(frame, (x, y), (end_cordx, end_cordy), color, stroke)
+
     #Display result
     cv2.imshow('frame', frame)
     if cv2.waitKey(20) & 0xFF == ord('q'):
