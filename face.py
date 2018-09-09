@@ -12,7 +12,9 @@ capture = cv2.VideoCapture(0)
 while(True):
     #Capture  frame-by-frame
     ret, frame = capture.read()
-    
+
+    #Convert the captured frame into gray "stuff"
+    grayScaling = cv2.cvtColor(ret, cv2.COLOR_BGR2GRAY)
     #Display result
     cv2.imshow('frame', frame)
     if cv2.waitKey(20) & 0xFF == ord('q'):
