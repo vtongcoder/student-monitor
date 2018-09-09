@@ -27,7 +27,7 @@ while(True):
         cv2.imwrite(img_item, roi_gray)
 
         #Draw a rectangle (?)
-        color = (250, 0, 0) #Blue BRG ???
+        color = (250, 0, 0) #Blue BGR ???
         stroke = 2
         end_cordx = x + w
         end_cordy = y + h
