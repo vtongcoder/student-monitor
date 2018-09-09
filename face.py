@@ -14,7 +14,15 @@ while(True):
     ret, frame = capture.read()
 
     #Convert the captured frame into gray "stuff"
-    grayScaling = cv2.cvtColor(ret, cv2.COLOR_BGR2GRAY)
+    grayScaling = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+    #Find faces
+    faces = face_lib.detectMultiScale(grayScaling, scaleFactor=1.5, minNeighbors=5)
+
+    #For loop
+    for(x, y, z, h) in faces:
+        print(x, y, z, h)
+
     #Display result
     cv2.imshow('frame', frame)
     if cv2.waitKey(20) & 0xFF == ord('q'):
