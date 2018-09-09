@@ -20,7 +20,7 @@ while(True):
     faces = face_lib.detectMultiScale(grayScaling, scaleFactor=1.5, minNeighbors=5)
 
     #For loop
-    for(x, y, z, h) in faces:
+    for(x, y, w, h) in faces:
         print(x, y, z, h)
 
     #Display result
