@@ -21,7 +21,7 @@ while(True):
 
     #For loop
     for(x, y, w, h) in faces:
-        print(x, y, z, h)
+        print(x, y, w, h)
 
     #Display result
     cv2.imshow('frame', frame)
