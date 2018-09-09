@@ -2,6 +2,8 @@
 import cv2
 import numpy
 
+face_lib = cv2.CascadeClassifier('data/haarcascade_frontalface_alt2.xml')
+
 #Capture is executeable
 capture = cv2.VideoCapture(0)
 
